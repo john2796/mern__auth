@@ -1,4 +1,3 @@
-// Setting up our db schema
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
@@ -18,7 +17,7 @@ const UserSchema = new Schema({
   },
   date: {
     type: Date,
-    required: Date.now
+    default: Date.now
   }
 });
 
