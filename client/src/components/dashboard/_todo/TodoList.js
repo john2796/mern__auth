@@ -24,7 +24,7 @@ export default class TodoList extends Component {
 
   // Remove Items
   deleteListHandler = currentTodo => {
-    const url = `http://localhost:4000/todos/delete/${currentTodo}`;
+    const url = `http://localhost:5000/todos/delete/${currentTodo}`;
     axios
       .delete(url)
       .then(res => {
@@ -40,7 +40,7 @@ export default class TodoList extends Component {
   // Get Items
   componentDidMount = () => {
     axios
-      .get(`http://localhost:4000/todos`)
+      .get(`http://localhost:5000/todos`)
       .then(response => {
         this.setState({ todos: response.data });
       })

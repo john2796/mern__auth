@@ -14,6 +14,7 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
     return (
       <React.Fragment>
+        <TodoContainer />
         <div style={{ height: "20vh" }} className="container valign-wrapper">
           <div className="row">
             <div className="col s12 center-align">
@@ -39,7 +40,6 @@ class Dashboard extends Component {
             </div>
           </div>
         </div>
-        <TodoContainer />
       </React.Fragment>
     );
   }
