@@ -8,6 +8,7 @@ import CreateTodo from "./CreateTodo";
 // import "bootstrap/dist/css/bootstrap.min.css";
 const Todos = styled.div`
   /* @import url("bootstrap/dist/css/bootstrap.min.css"); */
+  
 `;
 
 export class TodoContainer extends Component {
@@ -15,27 +16,24 @@ export class TodoContainer extends Component {
     return (
       <Router>
         <Todos className="container">
-          <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="..">
-              <img
-                src="https://react.semantic-ui.com/logo.png"
-                style={{
-                  width: 60
-                }}
-                alt="logo"
-              />
-            </a>
-            <Link to="/dashboard" className="navbar-brand">
-              Mern-Stack Todo App
-            </Link>
-            <div className="navbar-collapse nav-collapse">
-              <ul className="navbar-nav mr-auto">
-                <li className="navbar-item">
+          <nav>
+            <div className="nav-wrapper">
+              <Link to="/dashboard">
+                <img
+                  src="https://react.semantic-ui.com/logo.png"
+                  style={{
+                    width: 60
+                  }}
+                  alt="logo"
+                />
+              </Link>
+              <ul id="nav-mobile" className="right hide-on-med-and-down">
+                <li>
                   <Link to="/dashboard" className="nav-link">
                     Todos
                   </Link>
                 </li>
-                <li className="navbar-item">
+                <li>
                   <Link to="/dashboard/create" className="nav-link">
                     Create Todo
                   </Link>
@@ -43,6 +41,7 @@ export class TodoContainer extends Component {
               </ul>
             </div>
           </nav>
+
           <Route path="/dashboard" exact component={TodoList} />
           <Route path="/dashboard/edit/:id" component={EditTodo} />
           <Route path="/dashboard/create" component={CreateTodo} />

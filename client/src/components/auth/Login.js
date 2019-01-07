@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../store/actions/authActions";
+
+import PropTypes from "prop-types";
 import classnames from "classnames";
+
 class Login extends Component {
   constructor() {
     super();

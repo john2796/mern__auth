@@ -76,7 +76,6 @@ export default class CreateTodo extends Component {
                 type="radio"
                 name="priorityOptions"
                 value="Low"
-                className="form-check-input"
                 id="priorityLow"
                 checked={this.state.todo_priority === "Low"}
                 onChange={this.onChangeTodoPriority}
@@ -89,7 +88,6 @@ export default class CreateTodo extends Component {
                 type="radio"
                 name="priorityOptions"
                 value="Medium"
-                className="form-check-input"
                 id="priorityMedium"
                 checked={this.state.todo_priority === "Medium"}
                 onChange={this.onChangeTodoPriority}
@@ -102,7 +100,6 @@ export default class CreateTodo extends Component {
                 type="radio"
                 name="priorityOptions"
                 value="High"
-                className="form-check-input"
                 id="priorityHigh"
                 checked={this.state.todo_priority === "High"}
                 onChange={this.onChangeTodoPriority}
